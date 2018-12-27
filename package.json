@@ -26,5 +26,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-redux-firebase": "^2.2.5",
+    "redux-firestore": "^0.6.1"
+  }
 }
