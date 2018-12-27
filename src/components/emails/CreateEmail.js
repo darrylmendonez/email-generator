@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { createEmail } from '../../store/actions/emailActions'
 
 class CreateEmail extends Component {
   state = {
@@ -14,7 +16,8 @@ class CreateEmail extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state)
+    // console.log(this.state);
+    this.props.createEmail(this.state)
   }
   render() {
     return (
@@ -48,4 +51,10 @@ class CreateEmail extends Component {
   }
 }
 
-export default CreateEmail
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createEmail: (email) => dispatch(createEmail(email))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CreateEmail)

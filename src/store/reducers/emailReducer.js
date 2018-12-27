@@ -7,6 +7,10 @@ const initState = {
 }
 
 const emailReducer = (state = initState, action) => {
+  switch(action.type) {
+    case 'CREATE_EMAIL': 
+      console.log('created project', action.project)
+  }
   return state
 }
 
