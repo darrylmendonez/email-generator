@@ -9,10 +9,10 @@ const initState = {
 const emailReducer = (state = initState, action) => {
   switch(action.type) {
     case 'CREATE_EMAIL': 
-      console.log('created project', action.project);
+      console.log('created email', action.email);
       return state;
     case 'CREATE_EMAIL_ERROR':
-      console.log('create project error', action.err);
+      console.log('create email error', action.err);
       return state;
     default:
       return state
