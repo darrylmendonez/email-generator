@@ -4,11 +4,14 @@ import EmailList from '../emails/EmailList'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
+import { Redirect } from 'react-router-dom'
 
 class Dashboard extends Component {
   render() {
     // console.log(this.props);
-    const { emails } = this.props;
+    const { emails, auth } = this.props;
+    if (!auth.uid) return <Redirect to='/login' />
+
     return (
       <div className="dashboard container">
         <div className="row">
@@ -27,7 +30,8 @@ class Dashboard extends Component {
 const mapStateToProps = (state) => {
   console.log(state)
   return {
-    emails: state.firestore.ordered.emails
+    emails: state.firestore.ordered.emails,
+    auth: state.firebase.auth
   }
 }
 

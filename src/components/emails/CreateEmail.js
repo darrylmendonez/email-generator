@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createEmail } from '../../store/actions/emailActions'
+import { Redirect } from 'react-router-dom'
 
 class CreateEmail extends Component {
   state = {
@@ -16,10 +17,12 @@ class CreateEmail extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(this.state);
     this.props.createEmail(this.state)
   }
   render() {
+    const { auth } = this.props;
+    if (!auth.uid) return <Redirect to='/login' />
+
     return (
       <div>
         <div className="container">
@@ -51,10 +54,16 @@ class CreateEmail extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
     createEmail: (email) => dispatch(createEmail(email))
   }
 }
 
-export default connect(null, mapDispatchToProps)(CreateEmail)
+export default connect(mapStateToProps, mapDispatchToProps)(CreateEmail)
