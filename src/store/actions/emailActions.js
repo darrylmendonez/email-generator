@@ -6,13 +6,12 @@ export const createEmail = (email) => {
       ...email,
       authorFirstName: 'John',
       authorLastName: 'Smith',
-      authorID: 12345,
+      authorId: 12345,
       createdAt: new Date()
     }).then(() => {
       dispatch({ type: 'CREATE_EMAIL', email });
     }).catch((err) => {
       dispatch({ type: 'CREATE_EMAIL_ERROR', err });
     })
-    
   }
 };
