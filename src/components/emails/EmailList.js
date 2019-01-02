@@ -7,8 +7,8 @@ const EmailList = ({emails}) => {
     <div className="project-list section">
       { emails && emails.map(email => {
         return (
-          <Link to={'/email/' + email.id}>
-            <EmailSummary email={email} key={email.id} />
+          <Link to={'/email/' + email.id} key={email.id}>
+            <EmailSummary email={email} />
           </Link>
         )
       })}
