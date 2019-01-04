@@ -20,7 +20,7 @@ class Register extends Component {
     this.props.register(this.state)
   }
   render() {
-    const { auth } = this.props;
+    const { auth, authError } = this.props;
     if (auth.uid) return <Redirect to='/' />
 
     return (
@@ -46,6 +46,9 @@ class Register extends Component {
             </div>
             <div className="input-field">
               <button className="btn pink lighten-1 z-depth-0">Register</button>
+              <div className="red-text center">
+                { authError ? <p>{ authError }</p> : null }
+              </div>
             </div>
           </form>
         </div>
@@ -56,7 +59,8 @@ class Register extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
+    authError: state.auth.authError
   }
 }
 
