@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { register } from '../../store/actions/authActions'
 
 class Register extends Component {
   state = {
@@ -16,7 +17,7 @@ class Register extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state)
+    this.props.register(this.state)
   }
   render() {
     const { auth } = this.props;
@@ -59,4 +60,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Register)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    register: (newUser) => dispatch(register(newUser))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register)
