@@ -1,0 +1,172 @@
+/* helpers */
+.main-table {
+  border: 0;
+  width: 600px;
+  background-color: #ffffff;
+  border-spacing: 0;
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+  text-align: left;
+}
+
+tr {
+  border-bottom: none;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+/* element styles */
+.top-border {
+  background-color: #503291;
+  background-image: none;
+  background-repeat:repeat;
+  background-position:top left;
+  background-attachment:scroll;
+  width:600px;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-right:0px;
+  margin-left:0px;
+  text-align:left;
+  color:#ffffff;
+  font-size:14px;
+  line-height:18px;
+  font-family:'Helvetica Roman', Helvetica, Arial, sans-serif;
+  font-weight:normal;
+  border-collapse:collapse;
+}
+
+.title {
+  color:#503291;
+  font-size:24px;
+}
+
+.date {
+  color:#503291;
+  font-size:14px;
+  float: right;
+}
+
+.descriptions {
+  font-family:'Helvetica';
+  font-size:10pt;
+  line-height:11pt;
+}
+
+.highlights-section {
+  color:#0f93ce;
+}
+
+.highlights-title {
+  font-family:Helvetica;
+  font-size:12pt;
+}
+
+.border-seperator {
+  padding: 0;
+  background-color:#0f93ce;
+  background-image:none;
+  background-repeat:repeat;
+  background-position:top left;
+  background-attachment:scroll;
+  border-width:1px 0 0 0;
+  border-style:solid;
+  border-color:#0f93ce;
+  height:1px;
+  width:600px;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-right:0px;
+  margin-left:0px;
+  text-align:left;
+  border-collapse:collapse;
+}
+
+.publication-header {
+  background-color: #0f93ce;
+  background-image: none;
+  background-repeat:repeat;
+  background-position:top left;
+  background-attachment:scroll;
+  width:400px;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-right:0px;
+  margin-left:0px;
+  text-align:left;
+  color:#ffffff;
+  font-size:16px;
+  line-height:18px;
+  font-family:'Helvetica Roman', Helvetica, Arial, sans-serif;
+  font-weight:bold;
+  border-collapse:collapse;
+  border-radius: 0;
+}
+
+.publication-fields {
+  vertical-align: text-top;
+}
+
+.column-1 {
+  width: 330px;
+}
+
+.field-title {
+  font-family:Helvetica;
+  font-size:12pt;
+  font-weight:bold;
+  color:#503291;
+  width:100px;
+}
+
+.field-data {
+  font-family:Helvetica;
+  font-size:12pt;
+  line-height:14pt;
+  color:#503291;
+}
+
+.footer-border-top {
+  background-color:#0f93ce;
+  background-image:none;
+  background-repeat:repeat;
+  background-position:top left;
+  background-attachment:scroll;
+  border-width:1px 0 0 0;
+  height:6px;
+  width:600px;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-right:0px;
+  margin-left:0px;
+  font-weight:normal;
+  border-collapse:collapse;
+  padding: 0;
+  border-radius: 0;
+}
+
+.footer-border-bottom {
+  background-color:#503291;
+  background-image:none;
+  background-repeat:repeat;
+  background-position:top left;
+  background-attachment:scroll;
+  border-width:1px 0 0 0;
+  height:20px;
+  width:600px;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-right:0px;
+  margin-left:0px;
+  font-weight:normal;
+  border-collapse:collapse;
+  padding: 0;
+  border-radius: 0;
+}
+
+.footnote {
+  color:#0f93ce;
+}

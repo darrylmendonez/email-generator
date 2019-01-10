@@ -10,7 +10,7 @@ class Dashboard extends Component {
   render() {
     // console.log(this.props);
     const { emails, auth } = this.props;
-    if (!auth.uid) return <Redirect to='/login' />
+    if (!auth.uid) return <Redirect to='/' />
 
     return (
       <div className="dashboard container">
@@ -38,6 +38,6 @@ const mapStateToProps = (state) => {
 export default compose(
   connect(mapStateToProps),
   firestoreConnect([
-    { collection: 'emails' }
+    { collection: 'emails', orderBy: ['createdAt', 'desc'] }
   ])
 )(Dashboard)

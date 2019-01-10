@@ -22,7 +22,7 @@ class CreateEmail extends Component {
   }
   render() {
     const { auth } = this.props;
-    if (!auth.uid) return <Redirect to='/login' />
+    if (!auth.uid) return <Redirect to='/' />
 
     return (
       <div>
