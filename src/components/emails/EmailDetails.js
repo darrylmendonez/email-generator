@@ -4,10 +4,13 @@ import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 import moment from 'moment'
+import Descriptions from './email-partials/Descriptions'
+import Highlights from './email-partials/Highlights'
 import '../../styles/email-template.css';
 
 const EmailDetails = (props) => {
   const { email, auth } = props;
+  console.log(props);
   if (!auth.uid) return <Redirect to='/' />
 
   if (email) {
@@ -40,7 +43,9 @@ const EmailDetails = (props) => {
                 </tr>
                 <tr>
                   <td>
-                    <em className="descriptions">{ email.description }</em>
+                    <div>
+                      <Descriptions descriptions={email.descriptions} />
+                    </div>
                   </td>
                 </tr>
                 <tr>
@@ -48,7 +53,7 @@ const EmailDetails = (props) => {
                     <div className="highlights-section">
                       <strong className="highlights-title">HIGHLIGHTS:</strong>
                       <ul>
-                        <li>&bull;{ email.highlights }</li>
+                        <Highlights highlights={email.highlights} />
                       </ul>
                     </div>
                   </td>
@@ -113,9 +118,9 @@ const EmailDetails = (props) => {
                           
                           <td>
                             <ul>
-                              <li className="field-data">&bull; Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
-                              <li className="field-data">&bull; Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
-                              <li className="field-data">&bull; Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
+                              <li className="field-data"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
+                              <li className="field-data"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
+                              <li className="field-data"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
                             </ul>
                           </td>
                         </tr>
@@ -174,9 +179,9 @@ const EmailDetails = (props) => {
                           
                           <td>
                             <ul>
-                              <li className="field-data">&bull; Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
-                              <li className="field-data">&bull; Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
-                              <li className="field-data">&bull; Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
+                              <li className="field-data"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
+                              <li className="field-data"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
+                              <li className="field-data"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
                             </ul>
                           </td>
                         </tr>
@@ -235,9 +240,9 @@ const EmailDetails = (props) => {
                           
                           <td>
                             <ul>
-                              <li className="field-data">&bull; Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
-                              <li className="field-data">&bull; Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
-                              <li className="field-data">&bull; Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
+                              <li className="field-data"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
+                              <li className="field-data"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
+                              <li className="field-data"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem id voluptatem eius eos recusandae, quisquam autem minus quis et quod assumenda reprehenderit magni. Amet in quae minus animi, quaerat qui?</li>
                             </ul>
                           </td>
                         </tr>
@@ -256,7 +261,7 @@ const EmailDetails = (props) => {
                 </tr>
                 <tr>
                   <td>
-                    <small class="footnote">
+                    <small className="footnote">
                       *The following journals were included: Ann Oncol, Blood, Cancer Discov, Clin Cancer Res, J Clin Oncol, JAMA, JAMA Oncol, Lancet, Lancet Oncol, Nat Med, New Engl J Med, Sci Transl Med
                     </small>
                   </td>

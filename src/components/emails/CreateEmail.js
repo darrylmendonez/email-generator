@@ -11,9 +11,16 @@ class CreateEmail extends Component {
     highlights: []
   }
   handleChange = (e) => {
-    this.setState({
-      [e.target.id]: e.target.value
-    })
+    if ( (e.target.id === 'descriptions') || (e.target.id === 'highlights') ) {
+      this.setState({
+        [e.target.id]: [e.target.value]
+      })
+    } else {
+      this.setState({
+        [e.target.id]: e.target.value
+      })
+    }
+    
   }
   handleSubmit = (e) => {
     e.preventDefault();
@@ -30,16 +37,16 @@ class CreateEmail extends Component {
           <form onSubmit={this.handleSubmit} className="white">
             <h5 className="grey-text text-darken-3">Create Email Template</h5>
             <div className="input-field">
-              <label htmlFor="title">Title</label>
+              <label htmlFor="title">Email Title</label>
               <input type="text" id="title" onChange={this.handleChange} />
             </div>
             <div className="input-field">
-              <label htmlFor="date">Date</label>
+              <label htmlFor="date">Email Date</label>
               <input type="text" id="date" onChange={this.handleChange} />
             </div>
             <div className="input-field">
-              <label htmlFor="description">Description</label>
-              <textarea id="description" className="materialize-textarea" onChange={this.handleChange}></textarea>
+              <label htmlFor="descriptions">Descriptions</label>
+              <textarea id="descriptions" className="materialize-textarea" onChange={this.handleChange}></textarea>
             </div>
             <div className="input-field">
               <label htmlFor="highlights">Highlights</label>

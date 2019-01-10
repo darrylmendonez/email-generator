@@ -18,6 +18,10 @@ tr {
   padding: 0;
 }
 
+/* ul li {
+  list-style-type: disc;
+} */
+
 /* element styles */
 .top-border {
   background-color: #503291;
