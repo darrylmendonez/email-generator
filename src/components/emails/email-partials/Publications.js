@@ -2,7 +2,7 @@ import React from 'react'
 import KeyMessages from './KeyMessages'
 
 const Publications = ({publications}) => {
-  console.log(publications.length)
+  // console.log(publications.length)
   return (
     <span>
       { publications && publications.map(publication => {
