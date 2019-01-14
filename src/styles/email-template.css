@@ -1,4 +1,5 @@
 /* helpers */
+
 .main-table {
   border: 0;
   width: 600px;
@@ -41,6 +42,10 @@ tr {
   font-family:'Helvetica Roman', Helvetica, Arial, sans-serif;
   font-weight:normal;
   border-collapse:collapse;
+}
+
+.td-title {
+  width: 415px;
 }
 
 .title {

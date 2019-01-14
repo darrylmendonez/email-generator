@@ -15,7 +15,7 @@ const EmailDetails = (props) => {
 
   if (email) {
     return (
-      <div className="container section project-details">
+      <div className="section container">
         <div className="card z-depth-0">
           <div className="card-content">
             <table className="main-table">
@@ -25,12 +25,18 @@ const EmailDetails = (props) => {
                 </tr>
                 <tr>
                   <td className="no-padding">
-                    <img src="/img/header-logos.png" alt=""/>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="no-padding">
-                    <span className="title">{ email.title }</span>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td className="no-padding td-title">
+                            <span className="title">{ email.title }</span>
+                          </td>
+                          <td>
+                            <img src="/img/header-logos.png" />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </td>
                 </tr>
                 <tr>

@@ -50,10 +50,12 @@ class CreateEmail extends Component {
             <div className="input-field">
               <label htmlFor="descriptions">Descriptions</label>
               <textarea id="descriptions" className="materialize-textarea" onChange={this.handleChange}></textarea>
+              <span class="helper-text" data-error="wrong" data-success="right">Create multiple descriptions by adding a break line after the previous one by hitting enter.</span>
             </div>
             <div className="input-field">
               <label htmlFor="highlights">Highlights</label>
               <textarea id="highlights" className="materialize-textarea" onChange={this.handleChange}></textarea>
+              <span class="helper-text" data-error="wrong" data-success="right">Create multiple highlights by adding a break line after the previous one by hitting enter.</span>
             </div>
             <div className="input-field">
               <button className="btn pink lighten-1 z-depth-0">Create</button>
