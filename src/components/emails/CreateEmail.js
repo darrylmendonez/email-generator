@@ -12,8 +12,11 @@ class CreateEmail extends Component {
   }
   handleChange = (e) => {
     if ( (e.target.id === 'descriptions') || (e.target.id === 'highlights') ) {
+      var descriptionData = e.target.value;
+      var descriptionArray = descriptionData.split("\n");
+      console.log('descriptionArray = ', descriptionArray);
       this.setState({
-        [e.target.id]: [e.target.value]
+        [e.target.id]: descriptionArray
       })
     } else {
       this.setState({

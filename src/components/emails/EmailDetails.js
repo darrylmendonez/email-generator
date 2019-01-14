@@ -110,7 +110,7 @@ const EmailDetails = (props) => {
                                 </tr>
                               </tbody>
                             </table>
-                            <a href="http://www.google.com" target="_blank">
+                            <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">
                               <img src="/img/btn-gotopub.png" alt=""/>
                             </a>
                             
@@ -171,7 +171,7 @@ const EmailDetails = (props) => {
                                 </tr>
                               </tbody>
                             </table>
-                            <a href="http://www.google.com" target="_blank">
+                            <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">
                               <img src="/img/btn-gotopub.png" alt=""/>
                             </a>
                             
@@ -232,7 +232,7 @@ const EmailDetails = (props) => {
                                 </tr>
                               </tbody>
                             </table>
-                            <a href="http://www.google.com" target="_blank">
+                            <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">
                               <img src="/img/btn-gotopub.png" alt=""/>
                             </a>
                             
