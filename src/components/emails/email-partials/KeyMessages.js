@@ -6,7 +6,7 @@ const KeyMessages = ({keyMessages}) => {
     <ul>
       { keyMessages && keyMessages.map(keyMessage => {
         return (
-          <li className="field-data"> { keyMessage }</li>
+          <li className="field-data" key={Math.random()}> { keyMessage }</li>
         )
       })}
     </ul>

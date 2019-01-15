@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createEmail } from '../../store/actions/emailActions'
 import { Redirect } from 'react-router-dom'
+import PublicationCards from './form-partials/PublicationCards'
 
 class CreateEmail extends Component {
+  numberOfPubs = 1;
   publication = {
     pubTitle: '',
     author: '',
@@ -17,6 +19,10 @@ class CreateEmail extends Component {
     descriptions: [],
     highlights: [],
     publications: [this.publication]
+  }
+  howManyPubs = (e) => {
+    this.numberOfPubs = e.target.value
+    console.log('numberOfPubs = ', this.numberOfPubs);
   }
   handleChange = (e) => {
     if ( (e.target.id === 'descriptions') || (e.target.id === 'highlights') ) {
@@ -90,35 +96,24 @@ class CreateEmail extends Component {
               <span className="helper-text" data-error="wrong" data-success="right">Create multiple highlights by adding a break line after the previous one by hitting enter.</span>
             </div>
             <h6 className="grey-text text-darken-3">Publications</h6>
+            <label>How many publications are being shared?</label>
             <div className="row">
-              <div className="col s12 m6">
-                <div className="card blue-grey darken-1">
-                  <div className="card-content white-text">
-                    <div className="input-field">
-                      <label htmlFor="pubTitle">Publication Title</label>
-                      <input type="text" id="pubTitle" onChange={this.handleChange} />
-                    </div>
-                    <div className="input-field">
-                      <label htmlFor="author">Author</label>
-                      <input type="text" id="author" onChange={this.handleChange} />
-                    </div>
-                    <div className="input-field">
-                      <label htmlFor="journal">Journal</label>
-                      <input type="text" id="journal" onChange={this.handleChange} />
-                    </div>
-                    <div className="input-field">
-                      <label htmlFor="url">URL</label>
-                      <input type="text" id="url" onChange={this.handleChange} />
-                    </div>
-                    <div className="input-field">
-                      <label htmlFor="keyMessages">Key Messages</label>
-                      <textarea id="keyMessages" className="materialize-textarea" onChange={this.handleChange}></textarea>
-                      <span className="helper-text" data-error="wrong" data-success="right">Create multiple Key Messages by adding a break line after the previous one by hitting enter.</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="col m1">
+              <select className="browser-default" onChange={this.howManyPubs}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
               </div>
             </div>
+            <PublicationCards numberOfPubs={this.numberOfPubs} handleChange={this.handleChange} />
             <div className="input-field">
               <button className="btn pink lighten-1 z-depth-0">Create</button>
             </div>

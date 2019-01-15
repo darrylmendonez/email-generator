@@ -6,7 +6,7 @@ const Descriptions = ({descriptions}) => {
     <span>
       { descriptions && descriptions.map(description => {
         return (
-          <span>
+          <span key={Math.random()}>
             <em className="descriptions">{ description }</em>
             <br></br>
           </span>

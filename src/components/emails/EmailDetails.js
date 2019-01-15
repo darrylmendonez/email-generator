@@ -33,7 +33,7 @@ const EmailDetails = (props) => {
                             <span className="title">{ email.title }</span>
                           </td>
                           <td>
-                            <img src="/img/header-logos.png" />
+                            <img src="/img/header-logos.png" alt="" />
                           </td>
                         </tr>
                       </tbody>

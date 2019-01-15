@@ -7,7 +7,7 @@ const Publications = ({publications}) => {
     <span>
       { publications && publications.map(publication => {
         return (
-          <tr>
+          <tr key={Math.random()}>
             <td>
               <table>
                 <tbody>

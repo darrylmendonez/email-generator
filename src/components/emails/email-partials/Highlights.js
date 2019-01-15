@@ -4,10 +4,10 @@ const Highlights = ({highlights}) => {
   console.log(highlights.length)
   return (
     <span>
-      { highlights && highlights.map(description => {
+      { highlights && highlights && highlights.map(highlight => {
         return (
-          <li>
-            <em className="highlights">{ description }</em>
+          <li key={Math.random()}>
+            <em className="highlights">{ highlight }</em>
             <br></br>
           </li>
         )
