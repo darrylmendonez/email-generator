@@ -3,7 +3,7 @@ import React from 'react'
 const Highlights = ({highlights}) => {
   console.log(highlights.length)
   return (
-    <span>
+    <div class="highlights-list">
       { highlights && highlights && highlights.map(highlight => {
         return (
           <li key={Math.random()}>
@@ -12,7 +12,7 @@ const Highlights = ({highlights}) => {
           </li>
         )
       })}
-    </span>
+    </div>
   )
 }
 

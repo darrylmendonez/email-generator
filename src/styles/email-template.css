@@ -19,9 +19,9 @@ tr {
   padding: 0;
 }
 
-/* ul li {
+ul li {
   list-style-type: disc;
-} */
+}
 
 /* element styles */
 .top-border {
@@ -72,6 +72,10 @@ tr {
 .highlights-title {
   font-family:Helvetica;
   font-size:12pt;
+}
+
+.highlights-list {
+  padding-left: 20px;
 }
 
 .border-seperator {
