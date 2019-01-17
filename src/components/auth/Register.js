@@ -45,7 +45,7 @@ class Register extends Component {
               <input type="text" id="lastName" onChange={this.handleChange} />
             </div>
             <div className="input-field">
-              <button className="btn pink lighten-1 z-depth-0">Register</button>
+              <button className="btn grey darken-2 z-depth-3">Register</button>
               <div className="red-text center">
                 { authError ? <p>{ authError }</p> : null }
               </div>

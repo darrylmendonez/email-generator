@@ -11,7 +11,7 @@ const Jumbotron = (props) => {
   const loggedOutButtons = auth.uid ? <SignedInButton /> : <SignedOutButtons />;
   console.log('loggedOutInfo = ', loggedOutInfo);
   return (
-    <div className="card blue-grey darken-1">
+    <div className="card grey darken-2 z-depth-3">
       <div className="card-content white-text">
         <span className="card-title">Email Generator</span>
         <h6>A Synaptik Digital Demo</h6>

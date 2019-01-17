@@ -115,7 +115,7 @@ class CreateEmail extends Component {
             </div>
             <PublicationCards numberOfPubs={this.numberOfPubs} handleChange={this.handleChange} />
             <div className="input-field">
-              <button className="btn pink lighten-1 z-depth-0">Create</button>
+              <button className="btn grey darken-2 z-depth-3">Create</button>
             </div>
           </form>
         </div>

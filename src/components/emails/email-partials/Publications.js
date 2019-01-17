@@ -50,9 +50,7 @@ const Publications = ({publications}) => {
                       <a href={ publication.url } target="_blank" rel="noopener noreferrer">
                         <img src="/img/btn-gotopub.png" alt=""/>
                       </a>
-                      
                     </td>
-                    
                     <td className="valign-wrapper">
                       <KeyMessages keyMessages={publication.keyMessages} />
                     </td>

@@ -142,8 +142,12 @@ ul li {
   color:#503291;
 }
 
-ul:not(.browser-default)>li.km-list {
+ul:not(.browser-default)>li.km-list, ul:not(.browser-default)>li.instructions-list {
   list-style-type: disc;
+}
+
+.instructions-section {
+  padding-left: 40px;
 }
 
 .footer-border-top {
