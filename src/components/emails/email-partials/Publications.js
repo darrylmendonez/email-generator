@@ -53,7 +53,7 @@ const Publications = ({publications}) => {
                       
                     </td>
                     
-                    <td>
+                    <td className="valign-wrapper">
                       <KeyMessages keyMessages={publication.keyMessages} />
                     </td>
                   </tr>

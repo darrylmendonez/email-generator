@@ -142,6 +142,10 @@ ul li {
   color:#503291;
 }
 
+ul:not(.browser-default)>li.km-list {
+  list-style-type: disc;
+}
+
 .footer-border-top {
   background-color:#0f93ce;
   background-image:none;

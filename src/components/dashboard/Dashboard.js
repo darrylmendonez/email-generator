@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Notifications from './Notifications'
+import Info from './Info'
 import EmailList from '../emails/EmailList'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
@@ -19,7 +19,7 @@ class Dashboard extends Component {
             <EmailList emails={emails} />
           </div>
           <div className="col s12 m5 offset-m1">
-            <Notifications />
+            <Info auth={auth} />
           </div>
         </div>
       </div>
