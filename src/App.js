@@ -21,6 +21,7 @@ class App extends Component {
             <Route path='/login' component={LogIn} />
             <Route path='/register' component={Register} />
             <Route path='/create' component={CreateEmail} />
+            <Route path='email/p0IOfyh4bXi8WgBglYmS' component={EmailDetails} />
           </Switch>
         </div>
       </BrowserRouter>

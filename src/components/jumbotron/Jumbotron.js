@@ -2,12 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import SignedOutText from './SignedOutText'
 import SignedOutButtons from './SignedOutButtons'
+import SignedInButton from './SignedInButton'
 
 const Jumbotron = (props) => {
   console.log(props);
   const { auth } = props
   const loggedOutInfo = auth.uid ? null : <SignedOutText />;
-  const loggedOutButtons = auth.uid ? null : <SignedOutButtons />;
+  const loggedOutButtons = auth.uid ? <SignedInButton /> : <SignedOutButtons />;
   console.log('loggedOutInfo = ', loggedOutInfo);
   return (
     <div className="card blue-grey darken-1">
