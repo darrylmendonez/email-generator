@@ -96,7 +96,7 @@ class CreateEmail extends Component {
               <span className="helper-text" data-error="wrong" data-success="right">Create multiple highlights by adding a break line after the previous one by hitting enter.</span>
             </div>
             <h6 className="grey-text text-darken-3">Publications</h6>
-            <label>How many publications are being shared?</label>
+            {/* <label>How many publications are being shared?</label>
             <div className="row">
               <div className="col m1">
               <select className="browser-default" onChange={this.howManyPubs}>
@@ -112,7 +112,7 @@ class CreateEmail extends Component {
                 <option value="10">10</option>
               </select>
               </div>
-            </div>
+            </div> */}
             <PublicationCards numberOfPubs={this.numberOfPubs} handleChange={this.handleChange} />
             <div className="input-field">
               <button className="btn grey darken-2 z-depth-3">Create</button>
