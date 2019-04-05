@@ -40,6 +40,11 @@ class LogIn extends Component {
               </div>
             </div>
           </form>
+          <p>
+          Quick Login Creds:<br/>
+          Email: testing@testing.com<br/>
+          Password: 123456
+        </p>
         </div>
       </div>
     )
