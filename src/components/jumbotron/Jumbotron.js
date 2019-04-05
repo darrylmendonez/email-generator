@@ -14,17 +14,9 @@ const Jumbotron = (props) => {
     <div className="card grey darken-2 z-depth-3">
       <div className="card-content white-text">
         <span className="card-title">Email Generator</span>
-        <h6>A Synaptik Digital Demo</h6>
         <hr/>
-        <p>Synaptik Digital will work with you to create a customized HTML email template tailored to your company's branding.</p><br/>
-        <p>Once a a design has been approved by you, our team will create an email generator app for you to input your own content.</p><br/>
         <p>Simply fill out a form to input your content and an email will be auto-generated for you to copy, paste, and send to your clients.</p><br/>
-        { loggedOutInfo }<br/>
-        <p>
-          Quick Login Creds:<br/>
-          Email: testing@testing.com<br/>
-          Password: 123456
-        </p>
+        { loggedOutInfo }
       </div>
       { loggedOutButtons }
     </div>
